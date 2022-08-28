@@ -1,34 +1,64 @@
-## Usage
+# Frontend Mentor - Password generator app solution
 
-Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
+This is a solution to the [Password generator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/password-generator-app-Mr8CLycqjh). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-This is the reason you see a `pnpm-lock.yaml`. That being said, any package manager will work. This file can be safely be removed once you clone a template.
+## Table of contents
 
-```bash
-$ npm install # or pnpm install or yarn install
-```
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
+## Overview
 
-## Available Scripts
+### The challenge
 
-In the project directory, you can run:
+Users should be able to:
 
-### `npm dev` or `npm start`
+- Generate a password based on the selected inclusion options
+- Copy the generated password to the computer's clipboard
+- See a strength rating for their generated password
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Screenshot
 
-The page will reload if you make edits.<br>
+![](./screenshot.png)
 
-### `npm run build`
+### Links
 
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles Solid in production mode and optimizes the build for the best performance.
+- [Solution URL](https://github.com/iankakaruzia/password-generator-solid)
+- [Live Site URL](https://password-generator-solid.vercel.app)
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## My process
 
-## Deployment
+### Built with
 
-You can deploy the `dist` folder to any static host provider (netlify, surge, now, etc.)
+- Semantic HTML5 markup
+- TailwindCSS
+- Flexbox
+- Mobile-first workflow
+- [Vite](https://vitejs.dev/)
+- [SolidJS](https://www.solidjs.com/)
+
+### What I learned
+
+This was my first time working with SolidJS, so there was some shift of thinking, with the goal of learning more about the language.
+
+### Continued development
+
+I enjoyed working with SolidJS and Vite, and I'm excited to continue learning and building on these technologies.
+
+### Useful resources
+
+- [Generate Password Script](https://stackoverflow.com/a/68935403) - This helped me getting the generate script working.
+
+## Author
+
+- Frontend Mentor - [@iankakaruzia](https://www.frontendmentor.io/profile/iankakaruzia)
