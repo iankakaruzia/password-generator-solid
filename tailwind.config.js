@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'icon-check': 'url(/src/assets/images/icon-check.svg)'
+      },
       fontFamily: {
         sans: ['JetBrains Mono', 'monospace']
       },
@@ -37,5 +40,5 @@ module.exports = {
       }
     }
   },
-  plugins: []
+  plugins: [require('@tailwindcss/forms')]
 }
