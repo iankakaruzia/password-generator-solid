@@ -1,4 +1,5 @@
 import { Component, createEffect, createSignal, For } from 'solid-js'
+import { calculatePasswordStrength } from './utils/calculate-password-strength'
 import { classnames } from './utils/classnames'
 import { generatePassword } from './utils/generate-password'
 
@@ -15,8 +16,8 @@ const PasswordStrength: Component<PasswordStrengthProps> = (props) => {
     4: 'Strong'
   }
   return (
-    <div class='mt-8 flex h-14 items-center justify-between bg-gray-900 px-4 md:h-[72px] md:px-8'>
-      <span class='uppercase text-gray-500'>Strength</span>
+    <div class='mt-8 flex h-14 flex-wrap items-center justify-between bg-gray-900 px-4 md:h-[72px] md:px-8'>
+      <span class='mr-2 uppercase text-gray-500'>Strength</span>
 
       <div class='flex items-center gap-4'>
         <span class='text-body-medium uppercase md:text-heading-medium'>
@@ -63,25 +64,15 @@ const App: Component = () => {
   const [passwordStrength, setPasswordStrength] = createSignal(0)
 
   createEffect(() => {
-    let currentPasswordStrength = 0
-
-    if (hasUppercase()) {
-      currentPasswordStrength++
-    }
-
-    if (hasLowercase()) {
-      currentPasswordStrength++
-    }
-
-    if (hasNumbers()) {
-      currentPasswordStrength++
-    }
-
-    if (hasSymbols()) {
-      currentPasswordStrength++
-    }
-
-    setPasswordStrength(currentPasswordStrength)
+    setPasswordStrength(
+      calculatePasswordStrength({
+        length: length(),
+        hasUppercase: hasUppercase(),
+        hasLowercase: hasLowercase(),
+        hasNumbers: hasNumbers(),
+        hasSymbols: hasSymbols()
+      })
+    )
   })
 
   const copyGeneratedPassword = async () => {
